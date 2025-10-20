@@ -11,7 +11,7 @@ export default defineConfig({
   reporter: [['html'], ['allure-playwright']],
   outputDir: 'test-results/',
   use: {
-    baseURL: `process.env.${process.env.ENVIRONMENT || 'qa'}.BASE_URL` || 'https://www.automationexercise.com/',
+    baseURL: process.env.BASE_URL || 'https://www.automationexercise.com/',
     trace: 'on-first-retry',
     video: 'retain-on-failure',
     screenshot: 'only-on-failure',

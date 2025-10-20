@@ -51,6 +51,12 @@ jobs:
 
     - name: Ejecutar pruebas de Playwright
       run: |
+        if [ "${{ github.event.inputs.environment }}" = "qa" ]; then
+          export BASE_URL="${{ secrets.BASE_URL }}"
+        else
+          export BASE_URL="${{ secrets.BASE_URL }}"
+        fi
+
         if [ "${{ github.event.inputs.browser }}" = "all" ]; then
           npx playwright test
         else
