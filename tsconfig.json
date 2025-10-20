@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                // Versión de JS que se generará
+    "module": "CommonJS",              // Sistema de módulos
+    "lib": ["ESNext", "DOM"],          // Librerías disponibles (navegador y JS moderno)
+    "types": ["node", "@playwright/test"], // Tipos que se cargarán automáticamente
+    "moduleResolution": "node",        // Cómo buscar los módulos importados
+    "strict": true,                    // Habilita validaciones estrictas (mejor calidad del código)
+    "esModuleInterop": true,           // Permite importar librerías de JS tradicional
+    "skipLibCheck": true,              // Evita verificar tipos de dependencias externas
+    "outDir": "dist"                   // Carpeta donde se guardará el JS compilado
+  },
+  "include": [
+    "tests/**/*.ts",                   // Qué archivos incluir (tus tests)
+    "playwright.config.ts"             // Archivo de configuración de Playwright
+  ]
+}
