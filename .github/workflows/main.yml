@@ -17,7 +17,7 @@ on:
       environment:
         description: 'Ambiente de ejecución'
         required: true
-        default: 'staging'
+        default: 'qa'
         type: choice
         options:
           - qa
