@@ -83,10 +83,10 @@ jobs:
 
     - name: Subir reporte Allure (HTML)
       if: always()
-      uses: actions/upload-pages-artifact@v1
+      uses: actions/upload-pages-artifact@v3
       with:
         path: ./allure-report
 
     - name: Deploy to GitHub Pages
       if: always()
-      uses: actions/deploy-pages@v1
+      uses: actions/deploy-pages@v3
