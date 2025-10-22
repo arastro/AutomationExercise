@@ -1,4 +1,4 @@
- {
+{
   "name": "playwright-edgar-store",
   "version": "1.0.0",
   "main": "index.js",
@@ -7,21 +7,27 @@
     "test:qa": "ENVIRONMENT=qa npx playwright test",
     "test:staging": "ENVIRONMENT=staging npx playwright test",
     "test:debug": "ENVIRONMENT=qa npx playwright test --debug"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@eslint/js": "^9.38.0",
     "@faker-js/faker": "^9.9.0",
     "@playwright/test": "^1.56.0",
     "@types/node": "^24.7.2",
+    "@typescript-eslint/eslint-plugin": "^8.46.2",
+    "@typescript-eslint/parser": "^8.46.2",
     "allure-playwright": "^3.4.1",
     "dotenv": "^17.2.3",
-    "eslint": "^9.37.0",
+    "eslint": "^9.38.0",
+    "eslint-plugin-playwright": "^2.2.2",
+    "globals": "^16.4.0",
+    "jiti": "^2.6.1",
     "prettier": "^3.6.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2"
   }
 }

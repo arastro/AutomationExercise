@@ -61,7 +61,6 @@ jobs:
             pages/
             tests/
             utils/
-            node_modules/
 
   # 🧪 2. TEST: Ejecutar pruebas con Playwright
   test:
