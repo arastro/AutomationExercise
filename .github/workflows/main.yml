@@ -86,6 +86,9 @@ jobs:
         with:
           name: build-artifacts
 
+      - name: Instalar dependencias (usa cache)
+        run: npm ci --prefer-offline
+
       - name: Configurar BASE_URL según entorno
         run: |
           if [ "$ENVIRONMENT" = "qa" ]; then
