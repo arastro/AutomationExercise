@@ -55,9 +55,6 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
-      - name: Instalar navegadores de Playwright
-        run: npx playwright install --with-deps
-
       - name: Cache node_modules
         uses: actions/cache@v4
         with:
@@ -113,6 +110,9 @@ jobs:
           else
             echo "BASE_URL=${{ secrets.BASE_URL_STAGING }}" >> $GITHUB_ENV
           fi
+      
+      - name: Instalar navegadores de Playwright
+        run: npx playwright install --with-deps
 
       - name: Ejecutar pruebas Playwright
         run: |
