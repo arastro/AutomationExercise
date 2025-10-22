@@ -61,7 +61,6 @@ jobs:
             pages/
             tests/
             utils/
-            node_modules/
 
   # 🧪 2. TEST: Ejecutar pruebas con Playwright
   test:
@@ -87,8 +86,8 @@ jobs:
         with:
           name: build-artifacts
 
-      - name: Añadir node_modules/.bin al PATH
-        run: echo "$(pwd)/node_modules/.bin" >> $GITHUB_PATH
+      - name: Instalar dependencias (usa cache)
+        run: npm ci --prefer-offline
 
       - name: Configurar BASE_URL según entorno
         run: |
