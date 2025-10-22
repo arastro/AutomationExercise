@@ -87,6 +87,9 @@ jobs:
         with:
           name: build-artifacts
 
+      - name: Añadir node_modules/.bin al PATH
+        run: echo "$(pwd)/node_modules/.bin" >> $GITHUB_PATH
+
       - name: Configurar BASE_URL según entorno
         run: |
           if [ "$ENVIRONMENT" = "qa" ]; then
