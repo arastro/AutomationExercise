@@ -50,6 +50,7 @@ jobs:
         run: |
           echo "🔍 Running ESLint check..."
           npx eslint . --ext .js,.ts --max-warnings=0
+          echo "✅ ESLint check passed! No issues found."
 
   # 🧪 TEST: Ejecutar pruebas con Playwright
   test:
